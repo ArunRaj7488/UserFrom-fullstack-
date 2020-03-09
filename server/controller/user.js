@@ -9,11 +9,24 @@
  		
  		const user = await new User(req.body)
  		await user.save();
- 		res.send({ result: user, count: user.length})
+ 		res.send({ result: user})
 
  	} catch (err) {
- 		console.log(err);
+ 		res.status(500).send( { error: err });
  	}
+ };
+
+ module.exports.getUser = async (req, res) => {
+ 	try {
+ 		const user = await User.find();
+ 		console.log(res);
+ 		res.status(200).send( { count: user.length, result: user });
+
+
+ 	} catch (err) {
+ 		res.status(500).send( { error: err });
+ 	}
+
  };
 
  

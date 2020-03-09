@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-
 const addUser = (payload) =>  axios.post('http://localhost:4000/api/v1/user', payload);
 
+const getUser = () => axios.post('http://localhost:4000/api/v1/user');
 
-export default { addUser };
+export default { addUser, getUser };

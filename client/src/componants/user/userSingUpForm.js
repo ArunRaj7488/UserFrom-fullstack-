@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "../styleCss/userLogin.css";
-import UserServices from '../services/user'
+import UserServices from '../../services/user';
 import { Button, Form, Row, Col } from 'react-bootstrap';
  
 class User extends Component {
