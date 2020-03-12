@@ -1,12 +1,12 @@
 const express = require('express');
-const config = require('config');
+const config = require('./config/config');
 
 const app = express();
 const cors = require('cors');
  
  app.use(cors());
 
-//  if (!config.get("jwtPrivateKey")) {
+//  if (!config.jwtPrivateKey) {
 //     console.log("FATAL ERROR: jwtPrivateKey is not defined.");
 //     process.exit(1);
 //   }
