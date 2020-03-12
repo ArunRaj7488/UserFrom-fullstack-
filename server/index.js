@@ -1,9 +1,15 @@
 const express = require('express');
+const config = require('config');
 
 const app = express();
 const cors = require('cors');
  
- app.use(cors())
+ app.use(cors());
+
+//  if (!config.get("jwtPrivateKey")) {
+//     console.log("FATAL ERROR: jwtPrivateKey is not defined.");
+//     process.exit(1);
+//   }
 
 require('./router/db')
 require('./router/allRouter')(app);
