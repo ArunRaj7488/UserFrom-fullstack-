@@ -8,7 +8,7 @@ class UserTableView extends Component {
 				<div>
 					<Table  bordered hover size='sm'>
 						<thead>
-							<tr>
+							<tr style={{ backgroundColor: '#4CAF50'}}>
 								<th>#</th>
 								<th>Email</th>
 								<th>Name</th>

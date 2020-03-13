@@ -1,7 +1,8 @@
 import React, { Component, useEffect } from "react";
-import { Button } from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 import UserTableView from '../componants/user/userTableView';
 import UserServices from '../services/user';
+
 
 class UserManagement extends Component {
     constructor(props){
@@ -19,9 +20,14 @@ class UserManagement extends Component {
     render() {
         return(
             <div>
-                <h1>Users</h1>
-                <Button type="primary" href='/user-signup'>Add New User</Button>  
-                {console.log("asdfgfdsdfg",this.state.userData)}
+                <Row style={{ marginTop: '5px'}}>
+                    <Col>
+                        <h1>Users</h1>
+                    </Col>
+                    <Col>               
+                        <Button style={{position:'absolute', right:'20px', top:'5px' }} type="primary" href='/user-signup'>Add New User</Button>  
+                    </Col>
+                </Row>
                 <UserTableView  getUserData={this.state.userData} />          
               </div>
         );

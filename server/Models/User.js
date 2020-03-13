@@ -1,6 +1,5 @@
  const mongoose = require('mongoose');
- const config = require('config');
-const jwt = require('jsonwebtoken');
+ 
 const userSchema = new mongoose.Schema({
 	userName: { 
 		type: String,

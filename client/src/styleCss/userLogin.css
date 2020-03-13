@@ -1,11 +1,8 @@
-.divTag {
-    margin: "10px";
+.div-tag {
+    display: flex;
+    margin: 10px;
+    height: 100vh;
+    justify-content:center;
+    align-items:center;
 }
 
-.inputTag {
-    padding-left: "50px";
-}
-
-.lableTag {
-    margin-right: "10px";
-}

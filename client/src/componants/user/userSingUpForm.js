@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import UserServices from '../../services/user';
 import { Button, Form, Row, Col } from 'react-bootstrap';
+import '../../styleCss/userLogin.css';
  
 class User extends Component {
     constructor(props) {
@@ -47,7 +48,7 @@ class User extends Component {
             {field}:
           </Form.Label>
           <Col sm={10}>
-            <Form.Control type="text" name={field} placeholder={`Enter ${field}`} 
+            <Form.Control style={{ marginLeft: "50px"}} type="text" name={field} placeholder={`Enter ${field}`} 
             onChange={(e) => this.handleChange(e)}/>
           </Col>
         </Form.Group>  
@@ -56,17 +57,17 @@ class User extends Component {
 
     render () {
         return (
-          <div className="divTag m-2">
-            <Form>
+          <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems:"center" }}>
+            <Form >
               { this.renderFormFields()}
 
               <fieldset>
                 <Form.Group as={Row}>
                   <Form.Label as="legend" column sm={2}>
-                    Gender
+                    Gender:
                   </Form.Label>
 
-                  <Row sm={10} className="m-2" >
+                  <Row sm={10} style={{paddingLeft: "50px"}}className="m-2" >
                     <Form.Check
                       type="radio"
                       label="male"

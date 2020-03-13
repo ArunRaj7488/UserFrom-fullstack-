@@ -28,7 +28,7 @@ const generateHashPassword = require('../config/hashpassword');
 			phoneNumber, 
 			address, 
 			gender
-		 })
+		 });
 		 await user.save();
 
 			const token= jwt.sign({_id:user._id,email: user.email, password: user.password},config.jwtPrivateKey);
@@ -55,7 +55,6 @@ const generateHashPassword = require('../config/hashpassword');
  module.exports.login = async (req, res) => {
 	 try{
 
-		console.log('zxcvbnxmzn')
 		let user = await User.findOne({email:req.body.email});
 		if(!user) return res.status(400).send('Invalid email');
 	
